@@ -1,0 +1,33 @@
+###
+# 1: Mostrar su código IDAT y su nombre en el siguiente formato: CÓDIGO - NOMBRE
+GET https://idat-ec2.onrender.com/
+
+###
+# 2: Mostrar su código IDAT
+GET https://idat-ec2.onrender.com/idat/codigo
+
+###
+# 3: Mostrar su nombre completo
+GET https://idat-ec2.onrender.com/idat/nombre-completo
+
+
+
+
+###
+# 4: Listar cursos
+GET https://idat-ec2.onrender.com/idat/ec2/cursos/listar HTTP/1.1
+
+###
+# 5: Nuevo Curso
+POST idat-ec2.onrender.com/idat/ec2/cursos/nuevo HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+nombre=DSW1
+&creditos=2
+
+###
+# 6: Eliminar Curso
+DELETE idat-ec2.onrender.com/idat/ec2/cursos/eliminar HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+id=1
